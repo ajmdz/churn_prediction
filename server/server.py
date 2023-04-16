@@ -13,7 +13,7 @@ def predict_churn():
 	x.append(float(request.form['total_number_of_accounts']))
 	x.append(float(request.form['total_amount_change_q4-q1']))
 	x.append(float(request.form['average utilization ratio']))
-	
+    
 	response = jsonify({'churn_proba': util.get_churn_proba(*x)})
 	response.headers.add('Access-Control-Allow-Origin','*')
 
