@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js"></script>
+    <title>Churn App</title>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container-fluid">
+            <div class="container bg-div mb-4 mt-5 rounded-3 p-5 d-flex flex-row">
+                <div class="container pb-3 d-flex flex-column">
+                    <div class="container">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" class="ms-2 mb-1">Age</label>
+                                <input type="email" class="form-control w-50 fs-5" id="uiAgeValue"
+                                    aria-describedby="emailHelp" placeholder="Enter the age">
+                            </div>
+                        </form>
+                        <label for="exampleInputEmail1" class="mt-3 ms-1 mb-1">Gender</label>
+                        <div class="select-container">
+                            <select class="form-select select-box" name="uiGender" id="uiGenderValue"
+                                aria-label="Default select example">
+                                <option selected>Select gender</option>
+                                <option value="1">Other</option>
+                                <option value="2">Male</option>
+                                <option value="3">Female</option>
+                            </select>
+                            <div class="icon-container">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <label for="exampleInputEmail1" class="mt-3 ps-1 mb-1">Marital Status</label>
+                        <div class="switch-field marital form-check-inline d-flex flex-row">
+                            <input type="radio" class="input-marital" id="radio-bhk-1" name="uiMarital" value="1"
+                                checked>
+                            <label for="radio-bhk-1" class="marital-label me-1">Single</label>
+                            <input type="radio" class="input-marital" id="radio-bhk-2" name="uiMarital" value="2">
+                            <label for="radio-bhk-2" class="marital-label me-1">Married</label>
+                            <input type="radio" class="input-marital" id="radio-bhk-3" name="uiMarital" value="3">
+                            <label for="radio-bhk-3" class="marital-label me-1">Divorced</label>
+                            <input type="radio" class="input-marital" id="radio-bhk-4" name="uiMarital" value="4">
+                            <label for="radio-bhk-4" class="marital-label me-1">Unknown</label>
+                        </div>
+
+                        <label for="exampleInputEmail1" class="mt-3 ps-1 mb-1">Education</label>
+                        <div class="select-container">
+                            <select class="form-select select-box" id="uiEducation" aria-label="Default select example">
+                                <option selected>Select an Education</option>
+                                <option value="1">Unknown</option>
+                                <option value="2">Uneducated</option>
+                                <option value="3">Highschool</option>
+                                <option value="4">College</option>
+                                <option value="5">Graduate</option>
+                                <option value="6">Post-Graduate</option>
+                                <option value="7">Doctorate</option>
+                            </select>
+                            <div class="icon-container">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <label for="exampleInputEmail1" class="mt-3 ps-1 mb-1">Card Category</label>
+                        <div class="switch-field card-category d-flex flex-row">
+                            <input type="radio" class="input-1" id="radio-bhk-5" name="uiCardCategory" value="5"
+                                checked>
+                            <label for="radio-bhk-5" class="card-label px-4 me-1">Blue</label>
+                            <input type="radio" class="input-2" id="radio-bhk-6" name="uiCardCategory" value="6">
+                            <label for="radio-bhk-6" class="card-label px-4 me-1">Silver</label>
+                            <input type="radio" class="input-3" id="radio-bhk-7" name="uiCardCategory" value="7">
+                            <label for="radio-bhk-7" class="card-label px-4 me-1">Gold</label>
+                            <input type="radio" class="input-4" id="radio-bhk-8" name="uiCardCategory" value="8">
+                            <label for="radio-bhk-8" class="card-label px-3 me-1">Platinum</label>
+                        </div>
+                    </div>
+                    <div class="dot-wrapper">
+                        <form class="dot-form mb-4" action="">
+                            <label for="exampleInputEmail1" class="mt-4 ps-3">Income Category</label>
+                            <div id="dot-slider">
+                                <input type="radio" class="dot-input1" name="dot-amount" id="1" value="1">
+                                <label for="1" data-dot-amount="Unknown"></label>
+                                <input type="radio" class="dot-input2" name="dot-amount" id="2" value="2">
+                                <label for="2" data-dot-amount="Less than 40k"></label>
+                                <input type="radio" class="dot-input3" name="dot-amount" id="3" value="3">
+                                <label for="3" data-dot-amount="40k-60k"></label>
+                                <input type="radio" class="dot-input4" name="dot-amount" id="4" value="4">
+                                <label for="4" data-dot-amount="60k-80k"></label>
+                                <input type="radio" class="dot-input5" name="dot-amount" id="5" value="5">
+                                <label for="5" data-dot-amount="80k-120k"></label>
+                                <input type="radio" class="dot-input6" name="dot-amount" id="6" value="6">
+                                <label for="6" data-dot-amount="120k+"></label>
+
+                                <div id="dot-input-label"></div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <button type="button" class="btn btn-lg btn-block mt-5 btn-color"
+                        onclick="onClickedChurn()">Compute</button>
+
+                </div>
+                <div class="container d-flex flex-column justify-content-center border-start border-3 ms-3">
+                    <h1 class="text-center mb-4">CHURN SCORE</h1>
+                    <div class="container rounded-3 result" id="churnResult">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
