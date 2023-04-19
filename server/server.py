@@ -1,7 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import util
+import webbrowser
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, 
+	template_folder=os.path.abspath('../client'),
+	static_url_path='/',
+	static_folder=os.path.abspath('../client'))
 
 @app.route('/predict_churn', methods=['POST'])
 def predict_churn():
@@ -19,11 +24,12 @@ def predict_churn():
 
 	return response
 
-@app.route('/', methods=['GET'])
-def test():
-    return 'hello'
+@app.route('/')
+def home():
+	return render_template('index.html')
     
 if __name__ == '__main__':
 	print("Starting Python Flask Server for Credit Card Churn")
 	util.load_saved_artifacts()
+	webbrowser.open('http://localhost:5000/')
 	app.run()
