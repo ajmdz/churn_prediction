@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&family=Open+Sans:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,9 +25,9 @@
 
     <main>
         <div class="container-fluid">
-            <div class="container bg-div mb-4 mt-5 rounded-3 p-5">
+            <div class="container bg-div mb-4 mt-5 rounded-3 p-5 card-cont">
                 <div class="container-fluid rounded-3 py-3 mb-5 title">
-                    <h1 class="text-center mb-0 ">CHURN APPLICATION</h1>
+                    <h1 class="text-center mb-0 ">BANK CUSTOMER CHURN PREDICTION</h1>
                 </div>
 
                 <div class="container pb-3 d-flex flex-row">
@@ -90,13 +91,15 @@
                             </form>
                         </div>
 
-
-                        <button type="button" class="btn btn-lg btn-block mt-4 w-100 btn-color"
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <button type="button" class="btn btn-lg btn-block mt-4 btn-color"
                             onclick="onClickedChurn()">Compute</button>
 
+                        </div>
+                        
                     </div>
-                    <div class="container d-flex flex-column justify-content-center border-start border-3 ms-3">
-                        <h1 class="text-center mb-1">Will It Churn?</h1>
+                    <div class="container d-flex flex-column justify-content-center border-start border-3 ms-3 result-cont">
+                        <h1 class="text-center mb-1">CHURN RATE</h1>
                         <small id="emailHelp" class="form-text text-muted text-center fs-4">YES / NO</small>
                         <div class="container rounded-3 d-flex justify-content-center align-items-center result"
                             id="churnResult">

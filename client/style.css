@@ -1,15 +1,23 @@
 body {
-    font-family: Open Sans;
-    background-color: #393646;
+    font-family: 'Inter', sans-serif;
+    background-color: #9ebbc2;
 }
 
 .result {
     width: 250px;
     height: 50px;
     font-size: 10px;
-    background-color: #393646;
+    background-color: #577D86;
     color: white;
-    border: 2px solid #393646;
+}
+
+.card-cont {
+    box-shadow: 15px 15px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.title h1{
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .result h2 {
@@ -19,7 +27,7 @@ body {
 }
 
 .bg-div {
-    background-color: #F4EEE0;
+    background-color: #ffffff;
 }
 
 .input-holder {
@@ -28,8 +36,14 @@ body {
 }
 
 .btn-color{
-    background-color: #393646;
-    color: #F4EEE0;
+    background-color: #577D86;
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.btn-color:hover {
+    background-color: #ecf5f2;
 }
 
 .mid-form {
@@ -37,11 +51,13 @@ body {
 }
 
 .title {
-    background-color: #393646;
+    background-color: #577D86;
+    box-shadow: 5px 5px 5px 0px rgba(37, 52, 53, 0.295);
 }
 
-.title h1{
-    color: #F4EEE0;
+.result-cont h1{
+    font-weight: 700;
+    color: #2c4146
 }
 
 
